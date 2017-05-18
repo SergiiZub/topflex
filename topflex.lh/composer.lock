@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f08e0abea71b3609f00e1c90c38a4e7d",
+    "content-hash": "6d555607b07cb15116d1e719efd5b8e7",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -268,6 +268,64 @@
             "time": "2016-09-14T20:40:20+00:00"
         },
         {
+            "name": "dektrium/yii2-user",
+            "version": "0.9.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dektrium/yii2-user.git",
+                "reference": "26a4de66045fe9b9736a269d399cf5b15cfffe8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/26a4de66045fe9b9736a269d399cf5b15cfffe8b",
+                "reference": "26a4de66045fe9b9736a269d399cf5b15cfffe8b",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "^2.0.0",
+                "yiisoft/yii2-authclient": "^2.1.0",
+                "yiisoft/yii2-bootstrap": "^2.0.0",
+                "yiisoft/yii2-swiftmailer": "^2.0.0"
+            },
+            "require-dev": {
+                "codeception/specify": "^0.4.3",
+                "codeception/verify": "^0.3.1",
+                "yiisoft/yii2-codeception": "^2.0.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bootstrap": "dektrium\\user\\Bootstrap",
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev",
+                    "dev-develop": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dektrium\\user\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Erofeev",
+                    "email": "dmeroff@gmail.com",
+                    "homepage": "http://dmeroff.ru"
+                }
+            ],
+            "description": "Flexible user registration and authentication module for Yii2",
+            "keywords": [
+                "User management",
+                "dektrium",
+                "yii2",
+                "yii2-user"
+            ],
+            "time": "2017-01-11T20:26:20+00:00"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.9.2",
             "source": {
@@ -469,6 +527,54 @@
             "time": "2017-02-08T09:04:32+00:00"
         },
         {
+            "name": "yiisoft/yii2-authclient",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-authclient.git",
+                "reference": "9929acc03d61d96e6eabbb5e31b02d6f9faab10d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/9929acc03d61d96e6eabbb5e31b02d6f9faab10d",
+                "reference": "9929acc03d61d96e6eabbb5e31b02d6f9faab10d",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-httpclient": "~2.0.1"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\authclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "External authentication via OAuth and OpenID for the Yii framework",
+            "keywords": [
+                "OpenId",
+                "api",
+                "auth",
+                "oauth",
+                "yii2"
+            ],
+            "time": "2017-02-15T14:34:51+00:00"
+        },
+        {
             "name": "yiisoft/yii2-bootstrap",
             "version": "2.0.6",
             "source": {
@@ -567,6 +673,53 @@
                 "yii2"
             ],
             "time": "2016-12-20T13:26:02+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-httpclient",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-httpclient.git",
+                "reference": "113e4e361730f62c1bf50fbd6f09898776d404b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/113e4e361730f62c1bf50fbd6f09898776d404b1",
+                "reference": "113e4e361730f62c1bf50fbd6f09898776d404b1",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\httpclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "HTTP client extension for the Yii framework",
+            "keywords": [
+                "curl",
+                "http",
+                "httpclient",
+                "yii2"
+            ],
+            "time": "2017-02-15T14:28:10+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -708,16 +861,16 @@
         },
         {
             "name": "codeception/base",
-            "version": "2.2.10",
+            "version": "2.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/base.git",
-                "reference": "99142344c1c3ea147d2908473ee96bfef81a2349"
+                "reference": "eea7d29115390772363a4f7744396927b33bf4f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/base/zipball/99142344c1c3ea147d2908473ee96bfef81a2349",
-                "reference": "99142344c1c3ea147d2908473ee96bfef81a2349",
+                "url": "https://api.github.com/repos/Codeception/base/zipball/eea7d29115390772363a4f7744396927b33bf4f3",
+                "reference": "eea7d29115390772363a4f7744396927b33bf4f3",
                 "shasum": ""
             },
             "require": {
@@ -726,9 +879,10 @@
                 "ext-mbstring": "*",
                 "guzzlehttp/psr7": "~1.0",
                 "php": ">=5.4.0 <8.0",
-                "phpunit/php-code-coverage": ">=2.2.4 <5.0",
+                "phpunit/php-code-coverage": ">=2.2.4 <6.0",
                 "phpunit/phpunit": ">4.8.20 <6.0",
-                "sebastian/comparator": "~1.1",
+                "phpunit/phpunit-mock-objects": ">2.3 <5.0",
+                "sebastian/comparator": ">1.1 <3.0",
                 "sebastian/diff": "^1.4",
                 "stecman/symfony-console-completion": "^0.7.0",
                 "symfony/browser-kit": ">=2.7 <4.0",
@@ -795,7 +949,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2017-03-25T03:34:50+00:00"
+            "time": "2017-05-11T21:58:39+00:00"
         },
         {
             "name": "codeception/verify",

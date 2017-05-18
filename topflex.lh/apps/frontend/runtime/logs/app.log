@@ -1,0 +1,1419 @@
+2017-05-18 08:12:00 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 08:12:00 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '35154'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495095120.253
+    'REQUEST_TIME' => 1495095120
+]
+2017-05-18 08:13:15 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 08:13:15 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '35170'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495095195.439
+    'REQUEST_TIME' => 1495095195
+]
+2017-05-18 10:24:24 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 10:24:24 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495103064.695
+    'REQUEST_TIME' => 1495103064
+]
+2017-05-18 10:27:25 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 10:27:25 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37330'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495103245.428
+    'REQUEST_TIME' => 1495103245
+]
+2017-05-18 10:27:29 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 10:27:29 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37334'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495103249.447
+    'REQUEST_TIME' => 1495103249
+]
+2017-05-18 10:29:04 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 10:29:04 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37336'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495103344.93
+    'REQUEST_TIME' => 1495103344
+]
+2017-05-18 10:29:08 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /home/serg/www/topflex.lh/topflex.lh/web/assets in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(605): yii\di\ServiceLocator->get('assetManager')
+#7 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(328): require('/home/serg/www/...')
+#12 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/serg/www/...', Array)
+#13 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/serg/www/...', Array, Object(frontend\controllers\SiteController))
+#14 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#20 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/serg/www/topflex.lh/topflex.lh/web/index.php(38): yii\base\Application->run()
+#23 {main}
+2017-05-18 10:29:08 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s0klyke_QaHM7Q6gNmXNySEwmtK8dISU\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=2b4f73e2691a1abee819a6fa356a6c692527451a53b7aeaaad7f0517c3aad4eaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s0klyke_QaHM7Q6gNmXNySEwmtK8dISU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37338'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495103348.15
+    'REQUEST_TIME' => 1495103348
+]
+2017-05-18 10:39:55 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "backend". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('backend', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:39:55 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37572'
+    'REDIRECT_URL' => '/backend'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495103995.5
+    'REQUEST_TIME' => 1495103995
+]
+2017-05-18 10:40:00 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:00 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37576'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104000.14
+    'REQUEST_TIME' => 1495104000
+]
+2017-05-18 10:40:03 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:03 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37576'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104003
+    'REQUEST_TIME' => 1495104003
+]
+2017-05-18 10:40:06 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:06 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37576'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104006.705
+    'REQUEST_TIME' => 1495104006
+]
+2017-05-18 10:40:09 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:09 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37576'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104009.478
+    'REQUEST_TIME' => 1495104009
+]
+2017-05-18 10:40:12 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:12 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37576'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104012.461
+    'REQUEST_TIME' => 1495104012
+]
+2017-05-18 10:40:22 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:22 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37592'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104022.646
+    'REQUEST_TIME' => 1495104022
+]
+2017-05-18 10:40:25 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:25 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37594'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104025.673
+    'REQUEST_TIME' => 1495104025
+]
+2017-05-18 10:40:28 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:28 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37596'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104028.861
+    'REQUEST_TIME' => 1495104028
+]
+2017-05-18 10:40:34 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:40:34 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37612'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104034.652
+    'REQUEST_TIME' => 1495104034
+]
+2017-05-18 10:44:10 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:44:10 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37678'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104250.455
+    'REQUEST_TIME' => 1495104250
+]
+2017-05-18 10:44:23 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(40): yii\base\Application->run()
+#2 {main}
+2017-05-18 10:44:23 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '37702'
+    'REDIRECT_URL' => '/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495104263.621
+    'REQUEST_TIME' => 1495104263
+]
+2017-05-18 12:44:19 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Command.php:902
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Command.php(902): PDOStatement->execute()
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /home/serg/www/topflex.lh/topflex.lh/common/models/User.php(83): yii\db\BaseActiveRecord::findOne(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/common/models/LoginForm.php(73): common\models\User::findByUsername('admin')
+#7 /home/serg/www/topflex.lh/topflex.lh/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#10 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Model.php(358): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /home/serg/www/topflex.lh/topflex.lh/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(90): common\models\LoginForm->login()
+#14 [internal function]: frontend\controllers\SiteController->actionLogin()
+#15 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/serg/www/topflex.lh/topflex.lh/web/index.php(47): yii\base\Application->run()
+#21 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'
+The SQL being executed was: SELECT * FROM `tf_user` WHERE (`username`='admin') AND (`status`=10) in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /home/serg/www/topflex.lh/topflex.lh/common/models/User.php(83): yii\db\BaseActiveRecord::findOne(Array)
+#6 /home/serg/www/topflex.lh/topflex.lh/common/models/LoginForm.php(73): common\models\User::findByUsername('admin')
+#7 /home/serg/www/topflex.lh/topflex.lh/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#9 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#10 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Model.php(358): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /home/serg/www/topflex.lh/topflex.lh/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /home/serg/www/topflex.lh/topflex.lh/apps/frontend/controllers/SiteController.php(90): common\models\LoginForm->login()
+#14 [internal function]: frontend\controllers\SiteController->actionLogin()
+#15 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#17 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#18 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#19 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /home/serg/www/topflex.lh/topflex.lh/web/index.php(47): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'status' in 'where clause'
+)
+
+2017-05-18 12:44:19 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_POST = [
+    '_csrf-frontend' => 'dzhYZVN1VFM4SwEyPyViNyZXHTwpMWM0HVw1Lh5AIhkdXwoHCkEnFA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '205'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://topflex.lh'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://topflex.lh/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '42372'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495111459.826
+    'REQUEST_TIME' => 1495111459
+]
+2017-05-18 12:44:46 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "gii". in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii', Array)
+#1 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/serg/www/topflex.lh/topflex.lh/web/index.php(47): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/serg/www/topflex.lh/topflex.lh/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/serg/www/topflex.lh/topflex.lh/web/index.php(47): yii\base\Application->run()
+#2 {main}
+2017-05-18 12:44:46 [127.0.0.1][-][24stqha40pf9oep7dbe6o32a95][info][application] $_COOKIE = [
+    'advanced-frontend' => '24stqha40pf9oep7dbe6o32a95'
+    'advanced-backend' => 'm7kgc8o08jc6o28tkccb445cv0'
+    '_csrf-backend' => '08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL\";}'
+    'PHPSESSID' => '1ahvkv3bttqscoag0ad3ffk6q3'
+    '_csrf' => '1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ˆáf£ Ã›|­åH>ç³(˜‘ý·¼[Pßóu\";}'
+    '_csrf-frontend' => '723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'topflex.lh'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ru;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=24stqha40pf9oep7dbe6o32a95; advanced-backend=m7kgc8o08jc6o28tkccb445cv0; _csrf-backend=08ca7cd7393704023f080da9293bd80f476e93302128750ef9996d0102348c74a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22p8HguA9cyiYzSHnuJ87lRQnIQYV6h0xL%22%3B%7D; PHPSESSID=1ahvkv3bttqscoag0ad3ffk6q3; _csrf=1558ed340d3ae4f78a28ec702175eec62113c30e6da38c15d4c26aaef9465612a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%8F%12%88%E1f%A3+%C3%0B%18%9B%7C%01%AD%E5H%3E%E7%B3%28%98%91%FD%B7%8F%BC%5BP%DF%F3%0Fu%22%3B%7D; _csrf-frontend=723c1e3f0a608aec926da55a24215face123d04f599e091eebcf8ef7d456a49fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22OsYWlP6dQoEYzD7gjdmKM5vJjgRbY4sG%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at topflex.lh Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'topflex.lh'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/serg/www/topflex.lh/topflex.lh/web/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/serg/www/topflex.lh/topflex.lh/web/index.php'
+    'REMOTE_PORT' => '42444'
+    'REDIRECT_URL' => '/gii'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/gii'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1495111486.144
+    'REQUEST_TIME' => 1495111486
+]
